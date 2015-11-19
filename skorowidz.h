@@ -1,16 +1,21 @@
-#ifndef _SKOROWIDZ_H_
-#define _SKOROWIDZ_H_
+#ifndef _SKOROWIDZ_H
+#define _SKOROWIDZ_H
 
 typedef struct {
 	char *slowo;
+	int wystapienia;
 	int *linie;
-	int licznik;
-	int size;	
-} slowo_t
+	int size;
+} slowo_t;
 
-slowo_t* utworz_skorowidz(int n); // n- liczba slow
-void dodaj_slowo(slowo_t *s, char *str) ;
-void dodaj_linie(slowo_t *s, int i, int nr);
-void wypisz_skorowidz(slowo_t *s);
+typedef struct {
+	slowo_t *skr;
+	int n;
+} skorowidz_t;
 
-void usun_skorowidz(slowo_t *s);
+skorowidz_t* utworz_skorowidz(char **str, int n);
+void dodaj_linie(skorowidz_t* s, int i, int nr);
+void wypisz_skorowidz(skorowidz_t* s);
+void usun_skorowidz(skorowidz_t* s);
+
+#endif

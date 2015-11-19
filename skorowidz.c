@@ -54,12 +54,12 @@ void wypisz_skorowidz(skorowidz_t *s)
 /*
 int main(int argc, char **argv)
 {
-	skorowidz_t *s = utworz_skorowidz(argv, argc);
+	skorowidz_t *s = utworz_skorowidz(argv+1, argc-1);
 	int i;
 	int j;
-	for(i=0; i < argc; i++)
+	for(i=0; i < argc-1; i++)
 	{
-		for(j=0; j< argc; j++)
+		for(j=0; j< argc-1; j++)
 			dodaj_linie(s, i, i*j);
 		
 	}
