@@ -1,0 +1,6 @@
+-wyszukiwanie tylko całych słów
+-poprawić formatowanie skorowidza (informacja o nieznalezieniu słowa)
+
+Mniej ważne
+-przenieść definicje słowo_t do skorowidz.c
+-pozbyć się podwójnego wskaźnika w skorowidz_t
