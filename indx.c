@@ -28,12 +28,13 @@ main( int argc, char **argv ) {
 	while( fgets( buf, BUFSIZE, in ) != NULL ) {
 		ile_linii++;
 		for( i= 0; i < s->n; i++ )
-			if( strstr( buf, s->skr[i].slowo) != NULL ) {
+			if( strstr( buf, s->skr[i]->slowo) != NULL ) {
 				dodaj_linie(s, i, ile_linii);
 			}
 	}
 
 	wypisz_skorowidz(s);
-		
+	usun_skorowidz(s);
+	fclose(in);			
 	return EXIT_SUCCESS;
 }

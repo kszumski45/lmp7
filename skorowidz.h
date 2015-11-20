@@ -9,7 +9,7 @@ typedef struct {
 } slowo_t;
 
 typedef struct {
-	slowo_t *skr;
+	slowo_t **skr;
 	int n;
 } skorowidz_t;
 
